@@ -1,0 +1,54 @@
+name: HailState
+author: Zachary Sistrunk (zackman0010)
+main: io.github.zackman0010.HailState.HailState
+version: 1.0.0
+commands:
+  hailstate:
+    description: This sends out a "Hail State!" to the server
+    usage: /hailstate
+    permission: HailState.hailstate
+    permission-message: All users should have this permission
+  hailstatelogo:
+    description: This creates a MState logo on the ground where you are standing
+    usage: /hailstatelogo
+    permission: HailState.hailstatelogo
+    permission-message: To prevent spam, HailStateLogo is only available to OP
+  heysong:
+    description: The server treats you to a rousing renedition of the Hey Song
+    usage: /heysong
+    permission: HailState.heysong
+    permission-message: To prevent spam, HeySong is only available to OP
+  fightsong:
+    description: The server treats you to a rousing renedition of the Hey Song
+    usage: /fightsong
+    permission: HailState.fightsong
+    permission-message: To prevent spam, FightSong is only available to OP
+  almamater:
+    description: The server treats you to a moving renedition of the Alma Mater
+    usage: /almamater
+    permission: HailState.almamater
+    permission-message: To prevent spam, AlmaMater is only available to OP
+permissions:
+  HailState.*:
+    description: All commands
+    children:
+      HailState.hailstate: true
+      HailState.hailstatelogo: true
+      HailState.heysong: true
+      HailState.fightsong: true
+      HailState.almamater: true
+  hailstate:
+    description: This sends out a "Hail State!" to the server
+    default: true
+  hailstatelogo:
+    description: This creates a MState logo on the ground where you are standing
+    default: op
+  heysong:
+    description: The server treats you to a rousing renedition of the Hey Song
+    default: op
+  fightsong:
+    description: The server treats you to a rousing renedition of the Hey Song
+    default: op
+  almamater:
+    description: The server treats you to a moving renedition of the Alma Mater
+    default: op
